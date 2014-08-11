@@ -1,0 +1,84 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #FFFFFF;
+    border-top: 3px solid #0091ea;
+    text-align: center;
+    color: #535353;
+    font-size: 30px;
+    line-height: 1.7;
+}
+
+p {
+    margin: 12px 0;
+}
+
+.hide {
+    display: none;
+}
+
+#start {
+    position: absolute;
+    background-color: #00B0FF;
+    margin: auto;
+    padding: 28px;
+    width: 90%;
+    max-width: 524px;
+    left: 0;
+    bottom: 5%;
+    right: 0;
+    overflow: hidden;
+    border-bottom: 3px solid #0288D1;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#start > *{
+  pointer-events: none;
+}
+
+#start p {
+    z-index: 20;
+    position: relative;
+}
+
+#start .pressed-animation {
+    background: #0091ea;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    border-radius: 44%;
+    z-index: 10;
+}
+
+#start.pressed .pressed-animation {
+    -moz-transition: height linear .2s,width linear .2s;
+    -webkit-transition: height linear .2s,width linear .2s;
+    -o-transition: height linear .2s,width linear .2s;
+    transition: height linear .2s,width linear .2s;
+    width: 100%;
+    height: 420%;
+}
+
+#elapsed-time {
+    margin-top: 10vh;
+    font-size: 100px;
+}
